@@ -20,12 +20,14 @@ public class CadastrarProduto extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-
+            
+            GeneroLiterario generoliterario = new GeneroLiterario();
+            
             String descProduto = request.getParameter("descProduto");
             Double valorProduto = Double.parseDouble(request.getParameter("valorProduto"));
             String codigoIsbn = request.getParameter("codigoIsbn");
             String nomeAutor = request.getParameter("nomeAutor");
-            Integer idGenero = Integer.parseInt(request.getParameter("idGenero"));
+            generoliterario.setIdGenero(Integer.parseInt(request.getParameter("generoliterario")));
             
             String mensagem = null;
 
@@ -34,7 +36,7 @@ public class CadastrarProduto extends HttpServlet {
             livro.setValorProduto(valorProduto);
             livro.setCodigoIsbn(codigoIsbn);
             livro.setNomeAutor(nomeAutor);
-            livro.setGeneroLiterario(new GeneroLiterario(idGenero));
+            livro.setGeneroLiterario(generoliterario);
 
             try {
                 GenericDAO dao = new LivroDAOImpl();
@@ -45,7 +47,7 @@ public class CadastrarProduto extends HttpServlet {
                             + "Verifique os dados informados e tente novamente!";
                 }
                 request.setAttribute("mensagem", mensagem);
-                request.getRequestDispatcher("cadastrarproduto.jsp").forward(request, response);
+                request.getRequestDispatcher("cadastro.jsp").forward(request, response);
             } catch (Exception ex) {
                 System.out.println("Problemas no Servlet ao cadastrar Livro! Erro: "
                         + ex.getMessage());

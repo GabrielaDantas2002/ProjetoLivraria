@@ -13,10 +13,6 @@ public class GeneroLiterario {
         this.nomeGenero = nomeGenero;
     }
 
-    public GeneroLiterario(Integer idGenero) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public Integer getIdGenero() {
         return idGenero;
     }
@@ -32,6 +28,7 @@ public class GeneroLiterario {
     public void setNomeGenero(String nomeGenero) {
         this.nomeGenero = nomeGenero;
     }
+
     
     
 }

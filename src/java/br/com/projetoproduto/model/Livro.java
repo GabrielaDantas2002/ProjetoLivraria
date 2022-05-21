@@ -5,7 +5,7 @@ public class Livro extends Produto{
     private Integer idLivro;
     private String codigoIsbn;
     private String nomeAutor;
-    private GeneroLiterario GeneroLiterario;
+    private GeneroLiterario generoLiterario;
 
     public Livro() {
     }
@@ -14,7 +14,7 @@ public class Livro extends Produto{
         this.idLivro = idLivro;
         this.codigoIsbn = codigoIsbn;
         this.nomeAutor = nomeAutor;
-        this.GeneroLiterario = GeneroLiterario;
+        this.generoLiterario = GeneroLiterario;
     }
 
     public Integer getIdLivro() {
@@ -42,13 +42,12 @@ public class Livro extends Produto{
     }
 
     public GeneroLiterario getGeneroLiterario() {
-        return GeneroLiterario;
+        return generoLiterario;
     }
 
-    public void setGeneroLiterario(GeneroLiterario GeneroLiterario) {
-        this.GeneroLiterario = GeneroLiterario;
+    public void setGeneroLiterario(GeneroLiterario generoLiterario) {
+        this.generoLiterario = generoLiterario;
     }
 
-   
     
 }

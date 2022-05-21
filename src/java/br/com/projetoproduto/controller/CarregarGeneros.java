@@ -21,7 +21,7 @@ public class CarregarGeneros extends HttpServlet {
             try{
                 GenericDAO dao = new GeneroLiterarioDAOImpl();
                 request.setAttribute("generosliterarios", dao.listar());
-                request.getRequestDispatcher("cadastrarproduto.jsp").forward(request, response);
+                request.getRequestDispatcher("cadastro.jsp").forward(request, response);
             }catch(Exception e){
                 System.out.println("Problemas ao Listar produtos: Erro " 
                         + e.getMessage());

@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/temp/ProjetoProduto/src/java/br/com/projetoproduto/model/Livro.java</file>
+            <file>file:/C:/temp/ProjetoProduto/src/java/br/com/projetoproduto/controller/CarregarGeneros.java</file>
+            <file>file:/C:/temp/ProjetoProduto/src/java/br/com/projetoproduto/controller/CadastrarProduto.java</file>
+            <file>file:/C:/temp/ProjetoProduto/src/java/br/com/projetoproduto/model/GeneroLiterario.java</file>
+        </group>
     </open-files>
 </project-private>
