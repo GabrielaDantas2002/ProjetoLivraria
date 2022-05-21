@@ -1,0 +1,24 @@
+create table produto(
+	idproduto serial not null,
+	descproduto varchar(40),
+	valorproduto numeric(9,2),
+	constraint pk_produto primary key(idproduto)
+);
+
+create table generoliterario (
+        idgenero serial not null,
+        nomegenero varchar (30),
+        constraint pk_generoliterario primary key (idgenero)
+)
+
+create table livro(
+	idlivro serial not null,
+	codigoisbn varchar(40),
+	nomeautor varchar(40),
+	idproduto integer,
+        idgenero integer,
+	constraint pk_livro primary key(idlivro),
+	constraint fk_livro_produto foreign key(idproduto) references produto(idproduto)
+        constraint fk_livro_generoliterario foreign key (idgenero) references generoliterario (idgenero)
+);
+
